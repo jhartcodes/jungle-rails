@@ -4,6 +4,10 @@
     <h1>My Cart</h1>
   </header>
 
+  <%if enhanced_cart.length == 0  %>
+  <h2 class="alert alert-dark" role="alert">Your cart is empty <%= link_to 'Back', :root, class: 'btn btn-primary pull-right' %></h2>
+  <%else%>
+  
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +52,6 @@
       <% end %>
     </div>
   </div>
+  <%end%>
 
 </section>
