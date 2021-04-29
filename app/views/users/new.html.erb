@@ -1,12 +1,40 @@
+<div class="row" style="display:flex; justify-content:center;">
+    <div class="col-sm-6" style="text-align:center;">
+    <h1>Join Jungle!</h1>
+      <%= form_for :user, url: '/users' do |f| %>
+        
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%=  f.text_field :first_name, class: 'form-control' %>
+        </div>
 
-<h1>Signup!</h1>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name , class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+         <%= f.label :email %>
+         <%= f.text_field :email , class: 'form-control' %>
+        </div>
 
-<%= form_for :user, url: '/users' do |f| %>
+        <div class="form-group">
+         <%= f.label :password %>
+         <%= f.text_field :password , class: 'form-control' %>
+        </div>
+     
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+        <div class="form-group">
+         <%= f.label :password_confirmation %>
+         <%= f.text_field :password_confirmation , class: 'form-control' %>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your info with anyone else.</small>
+        </div>
 
-<% end %>
+          <%= f.submit "Submit" , class: 'btn btn-primary' %>
+        <br>
+
+        <h4>Already have an account? <%= link_to 'Login Here', '/login' %></h4>
+      <% end %>
+
+    </div>
+  </div>

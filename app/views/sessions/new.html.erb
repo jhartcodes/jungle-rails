@@ -1,18 +1,18 @@
 <div class="row" style="display:flex; justify-content:center;">
     <div class="col-sm-6" style="text-align:center;">
     <h1>Login!</h1>
-      <%= form_tag '/login' do |f|%>
+      <%= form_tag '/login' do %>
 
         <div class="form-group">
         <label>Email:</label>
         <br>
-        <%= text_field_tag :email %>
+        <%= text_field_tag :email, "", class: 'form-control' %> 
         </div>
 
         <div class="form-group">
         <label>Password:</label>
         <br>
-          <%= password_field_tag :password %>
+          <%= password_field_tag :password, "", class: 'form-control' %> 
         </div>
 
         <%= submit_tag "Login", class: 'btn btn-primary' %>
